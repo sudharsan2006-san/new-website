@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -45,6 +46,7 @@ export default function App() {
       <SectionDivider />
       <ErrorBoundary><RevealSection><Contact /></RevealSection></ErrorBoundary>
       <ErrorBoundary><Footer /></ErrorBoundary>
+      <Analytics />
     </main>
   );
 }
