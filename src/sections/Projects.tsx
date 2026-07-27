@@ -11,7 +11,8 @@ export default function Projects() {
             <motion.div
               key={project.id}
               className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-500/50 transition-colors"
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, rotateX: 5, rotateY: 5 }}
+              style={{ perspective: 1000 }}
             >
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-400 mb-4">{project.description}</p>
