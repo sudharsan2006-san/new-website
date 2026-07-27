@@ -10,6 +10,7 @@ import Experience from './sections/Experience';
 import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import ResumeCard from './components/ResumeCard';
+import SectionDivider from './components/SectionDivider';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
 import ProgressBar from './components/ProgressBar';
@@ -35,9 +36,13 @@ export default function App() {
         </RevealSection>
       </ErrorBoundary>
       <ErrorBoundary><RevealSection><Experience /></RevealSection></ErrorBoundary>
+      <SectionDivider />
       <ErrorBoundary><RevealSection><Achievements /></RevealSection></ErrorBoundary>
+      <SectionDivider />
       <ErrorBoundary><RevealSection><Certifications /></RevealSection></ErrorBoundary>
+      <SectionDivider />
       <ErrorBoundary><RevealSection><ResumeCard /></RevealSection></ErrorBoundary>
+      <SectionDivider />
       <ErrorBoundary><RevealSection><Contact /></RevealSection></ErrorBoundary>
       <ErrorBoundary><Footer /></ErrorBoundary>
     </main>

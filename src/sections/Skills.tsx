@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { SKILLS } from '../lib/constants';
-import { Code, Layout, Database, ShieldCheck, Sparkles, Layers, Info } from 'lucide-react';
+import { Code, Layout, Database, ShieldCheck, Sparkles, Layers, Info, X } from 'lucide-react';
+import { Skill } from '../types';
 
 const categoryConfig = [
   { name: 'All', icon: <Layers className="w-5 h-5" /> },
@@ -15,6 +16,7 @@ const categoryConfig = [
 
 export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
 
   const filteredSkills = selectedCategory === 'All' 
     ? SKILLS 
@@ -27,7 +29,7 @@ export default function Skills() {
         <p className="text-gray-400 text-center mb-6">Core programming languages, development stacks, testing methodologies, and analytical problem-solving competencies.</p>
         <div className="flex items-center justify-center gap-2 text-blue-400 mb-12 text-sm font-mono tracking-widest">
             <Info className="w-4 h-4" />
-            <span>CLICK ANY SKILL TO VIEW PROFICIENCY & PROJECT APPLICATIONS</span>
+            <span>CLICK ANY SKILL TO VIEW PROFICIENCY & DETAILS</span>
         </div>
         
         {/* Filter Buttons */}
@@ -62,7 +64,8 @@ export default function Skills() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="p-4 bg-neutral-900 border border-neutral-800 rounded-xl text-center relative overflow-hidden"
+                onClick={() => setSelectedSkill(skill)}
+                className="p-4 bg-neutral-900 border border-neutral-800 rounded-xl text-center relative overflow-hidden cursor-pointer"
                 whileHover={{
                   scale: 1.05,
                   borderColor: 'rgba(59, 130, 246, 0.5)',
@@ -78,6 +81,36 @@ export default function Skills() {
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Skill Modal */}
+      <AnimatePresence>
+        {selectedSkill && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm"
+            onClick={() => setSelectedSkill(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="bg-neutral-900 border border-neutral-800 p-8 rounded-3xl max-w-md w-full relative"
+              onClick={e => e.stopPropagation()}
+            >
+              <button 
+                onClick={() => setSelectedSkill(null)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-white"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <h3 className="text-3xl font-bold mb-4 text-blue-400">{selectedSkill.name}</h3>
+              <p className="text-gray-300 text-lg leading-relaxed">{selectedSkill.description}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

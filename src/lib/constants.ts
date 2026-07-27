@@ -1,17 +1,17 @@
 import { Project, Skill, Experience, Certification } from '../types';
 
 export const SKILLS: Skill[] = [
-  { name: 'Python', category: 'Programming' },
-  { name: 'C', category: 'Programming' },
-  { name: 'Java', category: 'Programming' },
-  { name: 'HTML', category: 'Frontend' },
-  { name: 'MySQL', category: 'Backend' },
-  { name: 'Manual Testing', category: 'Testing' },
-  { name: 'Functional Testing', category: 'Testing' },
-  { name: 'Problem Solving', category: 'Soft Skills' },
-  { name: 'Analytical Thinking', category: 'Soft Skills' },
-  { name: 'Teamwork', category: 'Soft Skills' },
-  { name: 'Cricket', category: 'Interests' },
+  { name: 'Python', category: 'Programming', description: 'Proficient in Python for automation, data manipulation, and building scalable backends.' },
+  { name: 'C', category: 'Programming', description: 'Solid understanding of low-level programming and memory management principles.' },
+  { name: 'Java', category: 'Programming', description: 'Experienced in developing robust desktop and enterprise applications using Java.' },
+  { name: 'HTML', category: 'Frontend', description: 'Expert in semantic HTML5 for building accessible and structured web interfaces.' },
+  { name: 'MySQL', category: 'Backend', description: 'Skilled in designing and managing relational database schemas and complex queries.' },
+  { name: 'Manual Testing', category: 'Testing', description: 'Hands-on experience in manual functional testing for ensuring high product quality.' },
+  { name: 'Functional Testing', category: 'Testing', description: 'Proficient in creating and executing functional test cases to validate software requirements.' },
+  { name: 'Problem Solving', category: 'Soft Skills', description: 'Strong ability to decompose complex technical problems into efficient, actionable solutions.' },
+  { name: 'Analytical Thinking', category: 'Soft Skills', description: 'Methodical approach to evaluating data and processes to improve system efficiency.' },
+  { name: 'Teamwork', category: 'Soft Skills', description: 'Collaborative team player experienced in working with diverse teams to achieve project milestones.' },
+  { name: 'Cricket', category: 'Interests', description: 'Passionate about team sports, emphasizing discipline and strategic thinking.' },
 ];
 
 export const PROJECTS: Project[] = [

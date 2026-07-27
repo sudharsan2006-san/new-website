@@ -15,6 +15,7 @@ export default function GitHubStats() {
   const [data, setData] = useState<GitHubData | null>(null);
   const [languages, setLanguages] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -40,6 +41,7 @@ export default function GitHubStats() {
         setLoading(false);
       } catch (error) {
         console.error('Error fetching GitHub data:', error);
+        setError(true);
         setLoading(false);
       }
     }
@@ -47,6 +49,7 @@ export default function GitHubStats() {
   }, []);
 
   if (loading) return <div className="text-center p-6 text-gray-400">Loading GitHub stats...</div>;
+  if (error) return <div className="text-center p-6 text-neutral-400">Unable to load GitHub stats.</div>;
   if (!data) return null;
 
   return (
