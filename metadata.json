@@ -1,0 +1,6 @@
+{
+  "name": "Sudharsan U Portfolio",
+  "description": "Premium AI-focused personal portfolio website for Sudharsan U.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
