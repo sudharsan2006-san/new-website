@@ -65,7 +65,7 @@ export default function Skills() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 onClick={() => setSelectedSkill(skill)}
-                className="p-4 bg-neutral-900 border border-neutral-800 rounded-xl text-center relative overflow-hidden cursor-pointer"
+                className="p-4 bg-neutral-900 border border-neutral-800 rounded-xl text-center relative overflow-hidden cursor-pointer skill-card"
                 whileHover={{
                   scale: 1.05,
                   borderColor: 'rgba(59, 130, 246, 0.5)',

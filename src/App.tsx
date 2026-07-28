@@ -5,8 +5,10 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import GitHubStats from './components/GitHubStats';
 import LinkedInCard from './components/LinkedInCard';
+import CodingProfiles from './components/CodingProfiles';
 import Achievements from './sections/Achievements';
 import Experience from './sections/Experience';
+import HackathonWin from './sections/HackathonWin';
 import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import ResumeCard from './components/ResumeCard';
@@ -16,10 +18,16 @@ import Loader from './components/Loader';
 import ProgressBar from './components/ProgressBar';
 import RevealSection from './components/RevealSection';
 import ErrorBoundary from './components/ErrorBoundary';
+import CustomCursor from './components/CustomCursor';
+import MouseGrid from './components/MouseGrid';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   return (
     <main className="bg-black min-h-screen text-white relative">
+      <MouseGrid />
+      <CustomCursor />
+      <BackToTop />
       <ProgressBar />
       <Loader />
       <Navbar />
@@ -35,7 +43,13 @@ export default function App() {
           </div>
         </RevealSection>
       </ErrorBoundary>
+      <ErrorBoundary>
+        <RevealSection>
+          <CodingProfiles />
+        </RevealSection>
+      </ErrorBoundary>
       <ErrorBoundary><RevealSection><Experience /></RevealSection></ErrorBoundary>
+      <ErrorBoundary><RevealSection><HackathonWin /></RevealSection></ErrorBoundary>
       <SectionDivider />
       <ErrorBoundary><RevealSection><Achievements /></RevealSection></ErrorBoundary>
       <SectionDivider />

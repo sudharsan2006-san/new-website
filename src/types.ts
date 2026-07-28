@@ -20,6 +20,7 @@ export interface Experience {
   period: string;
   description: string;
   certificateUrl?: string;
+  logo?: string;
 }
 
 export interface Certification {

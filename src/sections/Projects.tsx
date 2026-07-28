@@ -10,8 +10,14 @@ export default function Projects() {
           {PROJECTS.map((project) => (
             <motion.div
               key={project.id}
-              className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-500/50 transition-colors"
-              whileHover={{ y: -10, rotateX: 5, rotateY: 5 }}
+              className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-blue-500/50 transition-colors project-card"
+              whileHover={{ 
+                y: -15, 
+                rotateX: 10, 
+                rotateY: 10, 
+                scale: 1.02,
+                transition: { type: "spring", stiffness: 300, damping: 20 }
+              }}
               style={{ perspective: 1000 }}
             >
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>

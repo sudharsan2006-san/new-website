@@ -57,6 +57,7 @@ export const ACHIEVEMENTS = [
   { title: 'HackerRank', description: '5 Star in Python & Problem Solving' },
   { title: 'Cisco', description: 'Python Essentials 1 & 2' },
   { title: 'MongoDB', description: '4 Badges (Basics, CRUD, etc.)' },
+  { title: 'QthinkX Ideathon', description: '2nd Place, AquaGuard' },
 ];
 
 export const BASIC_CERTIFICATIONS: Certification[] = [
@@ -87,6 +88,9 @@ export const PROFESSIONAL_CERTIFICATIONS: Certification[] = [
   },
 ];
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/sudharsanu/';
+export const HACKERRANK_URL = 'https://www.hackerrank.com/profile/sudharsan9001';
+export const CODECHEF_URL = 'https://www.codechef.com/users/merry_pool_49';
+export const LEETCODE_URL = 'https://leetcode.com/u/sudharsan06/';
 
 export const EXPERIENCE: Experience[] = [
   {
@@ -95,12 +99,14 @@ export const EXPERIENCE: Experience[] = [
     period: 'Feb 2026 – Mar 2026 (8 Weeks)',
     description: 'Successfully completed the AICTE-supported Green Internship. Completed 30 hours of sustainability learning and 30 hours of live project work. Applied sustainable development concepts to real-world projects. Enhanced problem-solving, teamwork, communication, and project execution skills.',
     certificateUrl: 'https://drive.google.com/file/d/1xCsT158z3dgkH9zx0xJkRjtK77_3TQLl/view?usp=sharing',
+    logo: '/green_intern_logo.png',
   },
   {
     role: 'Software Testing Intern',
     company: 'Chennai Metro Rail Limited',
     period: '1 June 2026 – 30 June 2026',
     description: 'Manual and functional testing, test case design, bug tracking & reporting, with hands-on experience in travel system operations.',
-    certificateUrl: 'https://drive.google.com/file/d/1JAOOAyu5DJ9W_CL7eCn-Q7UTAQ2-5Og8/view?usp=sharing'
+    certificateUrl: 'https://drive.google.com/file/d/1JAOOAyu5DJ9W_CL7eCn-Q7UTAQ2-5Og8/view?usp=sharing',
+    logo: '/cmrl_logo.png'
   }
 ];
