@@ -8,7 +8,7 @@ export default function Experience() {
         <div className="max-w-3xl mx-auto space-y-6">
           {EXPERIENCE.map((exp, index) => (
             <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-2xl flex gap-4">
-              {exp.logo && <img src={exp.logo} alt={exp.company} className="w-12 h-12 rounded-full object-cover" />}
+              {exp.logo && <img src={exp.logo} alt={exp.company} className="w-12 h-12 rounded-full object-contain bg-white p-1" />}
               <div>
                 <h3 className="text-xl font-bold text-blue-400">{exp.role}</h3>
                 <p className="text-lg text-white">{exp.company}</p>
