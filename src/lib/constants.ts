@@ -99,7 +99,6 @@ export const EXPERIENCE: Experience[] = [
     period: 'Feb 2026 – Mar 2026 (8 Weeks)',
     description: 'Successfully completed the AICTE-supported Green Internship. Completed 30 hours of sustainability learning and 30 hours of live project work. Applied sustainable development concepts to real-world projects. Enhanced problem-solving, teamwork, communication, and project execution skills.',
     certificateUrl: 'https://drive.google.com/file/d/1xCsT158z3dgkH9zx0xJkRjtK77_3TQLl/view?usp=sharing',
-    logo: '/1m1b_logo.png',
   },
   {
     role: 'Software Testing Intern',
@@ -107,6 +106,5 @@ export const EXPERIENCE: Experience[] = [
     period: '1 June 2026 – 30 June 2026',
     description: 'Manual and functional testing, test case design, bug tracking & reporting, with hands-on experience in travel system operations.',
     certificateUrl: 'https://drive.google.com/file/d/1JAOOAyu5DJ9W_CL7eCn-Q7UTAQ2-5Og8/view?usp=sharing',
-    logo: '/cmrl_logo.png',
   }
 ];
