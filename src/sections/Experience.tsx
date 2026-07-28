@@ -1,3 +1,4 @@
+import { Briefcase } from 'lucide-react';
 import { EXPERIENCE } from '../lib/constants';
 
 export default function Experience() {
@@ -8,7 +9,13 @@ export default function Experience() {
         <div className="max-w-3xl mx-auto space-y-6">
           {EXPERIENCE.map((exp, index) => (
             <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-2xl flex gap-4">
-              {exp.logo && <img src={exp.logo} alt={exp.company} className="w-12 h-12 rounded-full object-contain bg-white p-1" />}
+              {exp.logo ? (
+                <img src={exp.logo} alt={exp.company} className="w-10 h-10 rounded-full object-contain bg-white p-1" />
+              ) : (
+                <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+                  <Briefcase className="w-5 h-5 text-blue-400" />
+                </div>
+              )}
               <div>
                 <h3 className="text-xl font-bold text-blue-400">{exp.role}</h3>
                 <p className="text-lg text-white">{exp.company}</p>
@@ -19,7 +26,7 @@ export default function Experience() {
                     href={exp.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-4 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30 hover:bg-blue-500/40 transition-colors"
+                    className="inline-block mt-4 px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm border border-blue-500/30 hover:bg-blue-400/40 transition-colors"
                   >
                     View Certificate
                   </a>
